@@ -11,10 +11,16 @@ public class BinarySearchImpl{
     @Autowired
     private SortAlgorithm sortAlgorithm;
 
+    /* Can be done without setter injection too, with a setter or without a setter "Behind the scenes" the happens the same.
+    public void setSortAlgorithm(SortAlgorithm sortAlgorithm){
+        this.sortAlgorithm = sortAlgorithm;
+    }*/
+
+    /* It can be done without a constructor, we can instead use setter injection
     public BinarySearchImpl(SortAlgorithm sortAlgorithm) {
         super();
         this.sortAlgorithm = sortAlgorithm;
-    }
+    }*/
 
     public int binarySearch(int[] numbers, int numberToSearchFor){
         int[] sortedNumbers = sortAlgorithm.sort(numbers);
